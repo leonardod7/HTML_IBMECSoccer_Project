@@ -1,0 +1,44 @@
+
+.body-format {
+  background-color: black;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+
+.div-header {
+  display: flex;
+  justify-content: center;
+  /*margin-bottom: 10px;*/
+}
+
+.Titulo {
+  color: #ffcc00;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+
+
+
+
+/*Vamos aplicar a media para o tamanho dos dispositivos.*/
+/*Acima de 482 até 1023 temos a formatação de um tablet, com 2 colunas*/
+/*Acima de 1024 teremos a formatação em desktop (que é o default)*/
+
+@media only screen and (max-width: 481px) {
+    .box-grupo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 482px) and (max-width: 1023px) {
+    .box-grupo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
