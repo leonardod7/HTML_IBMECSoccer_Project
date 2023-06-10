@@ -11,9 +11,9 @@ function mostrarAtleta(atletaDados) {
 
   // Criando a div para colocar a foto, o nome do atleta e o botão de fechar (voltar)
   const atletaDiv = document.createElement('div');
-
-  atletaDiv.style.width = '25%';
-  atletaDiv.style.height = '420px';
+  // formatando a div
+  atletaDiv.style.width = '50%';
+  atletaDiv.style.height = '600px';
   atletaDiv.style.marginTop = '10px';
   atletaDiv.style.marginLeft = '10px';
   atletaDiv.style.backgroundColor = 'dark gray';
@@ -21,9 +21,11 @@ function mostrarAtleta(atletaDados) {
   atletaDiv.style.borderRadius = '10px';
   atletaDiv.style.padding = '5px';
   atletaDiv.style.textAlign = 'center';
+  // atletaDiv.style.display = 'flex';
 
   // Atribuindo a foto da atleta para a propriedade src
   const fotoAtleta = document.createElement('img');
+  // formatando a foto
   fotoAtleta.src = atletaDados.imagem;
   fotoAtleta.style.marginTop = '10px';
 
@@ -39,15 +41,43 @@ function mostrarAtleta(atletaDados) {
   // Adicionando o nome do atleta para a div
   atletaDiv.appendChild(nome);
 
-
   // Criando o botão de fechar
   const botaoFechar = document.createElement('button');
+
+  // Formatando o botao
   botaoFechar.innerText = "fechar";
   botaoFechar.style.backgroundColor = '#ffcc00';
   botaoFechar.style.width = '100px';
   botaoFechar.style.border = '3px #ffcc00 solid';
   botaoFechar.style.borderRadius = '10px';
   botaoFechar.style.marginTop = '10px';
+
+
+  // Criando div com as informacoes dos atletas
+  const divInfo = document.createElement('div');
+  // formatando a div
+  divInfo.style.width = 'auto';
+  divInfo.style.height = '150px';
+  divInfo.style.marginTop = '10px';
+  divInfo.style.marginLeft = '10px';
+  divInfo.style.marginRight = '10px';
+  divInfo.style.backgroundColor = 'dark gray';
+  divInfo.style.border = '3px #ffcc00 solid';
+  divInfo.style.borderRadius = '10px';
+  divInfo.style.padding = '5px';
+  divInfo.style.textAlign = 'center';
+
+  // Criando as informaces dos atletas, para adicionarmos na divInfo
+  const InfoAtleta = document.createElement('p');
+  InfoAtleta.innerText = atletaDados.descricao;
+  InfoAtleta.style.color = '#ffcc00';
+  InfoAtleta.style.padding = '15px';
+
+  // Adicionando as informacoes dos atletas na div de informacoes
+  divInfo.appendChild(InfoAtleta);
+
+  // Adicionando o botão na div principal
+  atletaDiv.appendChild(divInfo);
 
   // Criando a função para fechar
   botaoFechar.onclick = function(ev) {
@@ -66,18 +96,23 @@ function mostrarAtleta(atletaDados) {
 }
 
 
-// 2) ====================================================================================
+// ==============================================================================================================
 
+// Função para mostrar elenco masculino
 function mostrarElencoMasculino() {
   mostrarElenco(elenco_masculino);
 }
 
+// Função para mostrar elenco feminino
 function mostrarElencoFeminino() {
   mostrarElenco(elenco_feminino);
 }
 
 
-// 2.1) Função para exibir os cards na página
+// ==============================================================================================================
+
+
+// Função para exibir os cards na página
 function mostrarElenco(elenco) {
 
   // Acessando o container
@@ -110,8 +145,8 @@ function mostrarElenco(elenco) {
     // Vamos formatar a imagem
     imgElement.style.padding = '10px';
     imgElement.style.borderRadius = '10px';
-    // Adicionar para a propriedade src cada endereço URL da imagem
 
+    // Adicionar para a propriedade src cada endereço URL da imagem
     imgElement.src = elenco[i].imagem;
 
     // Adicionar cada imagem para uma div
@@ -127,11 +162,18 @@ function mostrarElenco(elenco) {
   }
 }
 
+
+// ==============================================================================================================
+
+
 function displayImages() {
   mostrarElencoFeminino();
   mostrarElencoMasculino();
-
 }
 
-// 2.2) Vamos chamar a função para exibir as imagens ao carregar a página
+
+// ==============================================================================================================
+
+
+// Vamos chamar a função para exibir as imagens ao carregar a página
 window.onload = displayImages;

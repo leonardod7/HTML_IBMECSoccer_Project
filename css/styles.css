@@ -10,7 +10,6 @@
     grid-gap: 10px;
 }
 
-
 .div-header {
   display: flex;
   justify-content: center;
@@ -24,21 +23,22 @@
 }
 
 
-
-
-
 /*Vamos aplicar a media para o tamanho dos dispositivos.*/
-/*Acima de 482 até 1023 temos a formatação de um tablet, com 2 colunas*/
-/*Acima de 1024 teremos a formatação em desktop (que é o default)*/
 
-@media only screen and (max-width: 481px) {
-    .box-grupo {
-        grid-template-columns: repeat(1, 1fr);
+@media only screen and (max-width: 768px) {
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media only screen and (min-width: 482px) and (max-width: 1023px) {
-    .box-grupo {
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .image-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .image-container {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
