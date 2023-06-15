@@ -100,6 +100,15 @@ function mostrarAtleta(atletaDados) {
 
 // Função para mostrar elenco masculino
 function mostrarElencoMasculino() {
+  //
+  // const nomeElenco = document.createElement("h2");
+  // nomeElenco.innerHTML = 'Elenco Masculino';
+  // nomeElenco.style.color = '#ffcc00';
+  // nomeElenco.style.textAlign = 'center';
+  // nomeElenco.style.fontSize = '12px';
+  // nomeElenco.style.display = 'flex';
+  // const container = document.getElementById("image-container");
+  // container.appendChild(nomeElenco)
   mostrarElenco(elenco_masculino);
 }
 
