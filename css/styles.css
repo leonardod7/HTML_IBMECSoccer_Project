@@ -10,6 +10,35 @@
     grid-gap: 10px;
 }
 
+.image-container-feminino {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.image-container-masculino {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.Titulo-fem {
+  color: #ffcc00;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.Titulo-masc {
+  color: #ffcc00;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+
 .div-header {
   display: flex;
   justify-content: center;
@@ -29,15 +58,16 @@
     .image-container {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+/*@media only screen and (min-width: 769px) and (max-width: 1025px) {*/
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
     .image-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+@media only screen and (min-width: 1026px) and (max-width: 1200px) {
     .image-container {
         grid-template-columns: repeat(6, 1fr);
     }
