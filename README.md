@@ -63,7 +63,7 @@ o script com a lógica criada é o teste.js. A versão final do projeto está na
 O arquivo dados.js, contém as informações úteis sobre cada jogador do elenco profissional, time feminino e masculino.
 
 Obs.: Optei por fazer essa lógica de não criar outra página detalhes e fazer tudo via JS, pois achei mais interessante e queria testar o funcionamento.
-
+Link do projeto: https://leonardod7.github.io/HTML_IBMECSoccer_Project/
 
 <div id='ref'/>
 
