@@ -58,7 +58,7 @@ A aplicação WEB deverá utilizar conceitos de implementação via JavaScript, 
 Para resolver o problema, para a página principal do elenco, foi criado um script que irá renderizar tanto a página principal do elenco e uma nova página de detalhes na mesma página do index.
 A lógica utilizada foi de criarmos uma função que renderiza todo o elenco profissional (feminino e masculino) e, quando clicamos em algum atleta, temos uma função que
 oculta o todo o elenco e mostra somente o card daquele atleta que clicamos.
-o script com a lógica criada é o detahes.js.
+o script com a lógica criada é o teste.js. A versão final do projeto está na branch-2.
 
 O arquivo dados.js, contém as informações úteis sobre cada jogador do elenco profissional, time feminino e masculino.
 
